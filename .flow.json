@@ -1,0 +1,17 @@
+{
+  "work_dir": "work",
+  "protected_paths": [
+    "src/",
+    "tests/",
+    "Cargo.toml",
+    "Cargo.lock"
+  ],
+  "standing_gates": [
+    "cargo fmt --check",
+    "cargo clippy --all-targets -- -D warnings",
+    "cargo test"
+  ],
+  "codegen": [
+    "\\bcargo\\s+fmt\\b(?!.*--check)"
+  ]
+}
